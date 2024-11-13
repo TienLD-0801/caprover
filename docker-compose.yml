@@ -1,0 +1,14 @@
+# services:
+#     caprover-edge:
+#         environment:
+#             - CAPTAIN_BASE_DIRECTORY=/Users/${USER}/.captain
+#             - ACCEPTED_TERMS=true
+#             - MAIN_NODE_IP_ADDRESS=127.0.0.1
+#         ports:
+#             - '80:80'
+#             - '443:443'
+#             - '3000:3000'
+#         volumes:
+#             - '/var/run/docker.sock:/var/run/docker.sock'
+#             - '/Users/${USER}/.captain:/Users/${USER}/.captain'
+#         image: caprover/caprover-edge

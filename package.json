@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.4",
+    "@vuepic/vue-datepicker": "^9.0.3",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
+    "gap-otp-confirm": "0.0.38",
+    "mqtt": "^5.10.1",
+    "nuxt": "^3.14.159",
+    "pinia": "^2.2.2",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "vue": "^3.5.12",
+    "vue-easy-lightbox": "^1.19.0",
+    "vue-router": "latest",
+    "vue3-emoji-picker": "^1.1.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11"
+  }
+}

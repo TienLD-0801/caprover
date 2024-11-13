@@ -1,0 +1,5 @@
+docker-compose
+node_modules
+build
+.nuxt
+.vscode
