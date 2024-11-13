@@ -15,26 +15,21 @@ jobs:
         node-version: [18.x]
 
     steps:
-      # Bước 1: Checkout mã nguồn
       - name: Check out repository
         uses: actions/checkout@v4
       
-      # Bước 2: Thiết lập Node.js với Yarn cache
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
 
-      # Bước 3: Cài đặt dependencies bằng Yarn
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      # Bước 4: Build ứng dụng
       - name: Build application
         run: yarn build --if-present
 
-      # Bước 5: Nén các file cần thiết vào deploy.tar
       - name: Create deploy tar file
         uses: a7ul/tar-action@v1.1.0
         with:
@@ -45,7 +40,6 @@ jobs:
             captain-definition
           outPath: deploy.tar
 
-      # Bước 6: Deploy ứng dụng lên CapRover
       - name: Deploy App to CapRover
         uses: caprover/deploy-from-github@v1.0.1
         with:
